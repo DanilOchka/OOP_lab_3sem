@@ -4,23 +4,27 @@ using System.Text;
 
 namespace Lab_1
 {
+    public enum Status_of_Game
+    {
+        Win,
+        Lose,
+        START,
+    }
     public class GameAccount
     {
         private int First_Rating = 10; //початковий рейтинг кожного гшраця
         public string UserName { get; set; } //Ім'я гравця
 
+        public  List<Game> gameList = new List<Game>();
+
         //перелік статусів можливих завершень гри
-        enum Status_of_Game
-        {
-            Win,
-            Lose,
-        }
+        
         //змінна поточного рейтингу гравця (обраховується шляхом додавання всіх рейтингів які зароблені або втрачені в іграх)
         public int CurrentRating
         {
             get
             {
-                int currentRating = 0;
+                int currentRating = First_Rating;
 
 
                 foreach (var item in gameList)
@@ -32,13 +36,28 @@ namespace Lab_1
             }
 
         }
-        public int GamesCount { get; set; } //кількість зіграних партій ігор одного гравця (просто лічильникігор).
+        public int GamesCount {
+            get
+            {
+                int currentRating = 1;
+
+
+                foreach (var item in gameList)
+                {
+                    currentRating++;
+
+                }
+                return currentRating;
+            }
+
+            
+        } //кількість зіграних партій ігор одного гравця (просто лічильникігор).
 
         private static List<string> AllNames = new List<string>(); //створення загального списку імен гравців
 
         Random rand = new Random();
 
-        public List<Game> gameList = new List<Game>();
+        
         public GameAccount(string name)
         {
             if (AllNames.Contains(name))
@@ -46,11 +65,11 @@ namespace Lab_1
                 throw new ArgumentException('"' + name + '"' + " Це iмя'я вже зайнято");
             }
             AllNames.Add(name);
-            Game win = new Game("START", UserName, "START\t", First_Rating, "START", GamesCount);
-            gameList.Add(win);
+            //Game start_point = new Game("START", UserName, "START\t", First_Rating, ((Status_of_Game)2), GamesCount);
+            //gameList.Add(start_point);
 
             UserName = name;
-            GamesCount = 0; //початкова кількість зігарних ігор
+            //GamesCount = 0; //початкова кількість зігарних ігор
 
         }
 
@@ -84,8 +103,8 @@ namespace Lab_1
             {
                 throw new ArgumentOutOfRangeException(nameof(game_rating), "Рейтинг на який грають має бути додатнiм");
             }
-            GamesCount++;
-            Game win = new Game(g_id, UserName, opponent.UserName, game_rating, " " + ((Status_of_Game)0).ToString(), GamesCount);
+            //GamesCount++;
+            Game win = new Game(g_id, UserName, opponent.UserName, game_rating, ((Status_of_Game)0), GamesCount);
             gameList.Add(win);
             //Console.WriteLine("Гру проведено успiшно. Ви отримали +" + game_rating + " балiв.");
         }
@@ -106,8 +125,8 @@ namespace Lab_1
             {
                 minus = -game_rating;
             }
-            GamesCount++;
-            Game lose = new Game(g_id, UserName, opponent.UserName, minus, ((Status_of_Game)1).ToString(), GamesCount);
+            //GamesCount++;
+            Game lose = new Game(g_id, UserName, opponent.UserName, minus, ((Status_of_Game)1), GamesCount);
             gameList.Add(lose);
             //Console.WriteLine("Гру проведено успiшно. Ви отримали " +  minus + " балiв.");
 
@@ -136,7 +155,7 @@ namespace Lab_1
         {
             Console.WriteLine("\n\nСтатистика гравця " + UserName);
             var report = new System.Text.StringBuilder();
-            int allRating = 0;
+            int allRating = First_Rating;
             report.AppendLine(" ________________________________________________________________________________________________________________________");
             report.AppendLine(" №\t |\tUsername\t |\tOpponent\t |\tID\t |   GameRating   |\tStatus\t |   CurRating   |");
             foreach (var item in gameList)

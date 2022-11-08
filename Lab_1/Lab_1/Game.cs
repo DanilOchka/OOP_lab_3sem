@@ -12,9 +12,9 @@ namespace Lab_1
         public int GRating { get; }
         public int Num_of_Game { get; }
 
-        public string Status;
+        public Status_of_Game Status;
 
-        public Game(string id, string name, string opponent, int game_raiting, string s, int gameCount)
+        public Game(string id, string name, string opponent, int game_raiting, Status_of_Game s, int gameCount)
         {
             Num_of_Game = gameCount; //кількість ігор
             User = name;
