@@ -1,0 +1,14 @@
+E:\Учеба\2 курс\ООП\Лаб\Lab_2\Lab_2\Lab_2\bin\Debug\netcoreapp3.1\Lab_2.exe
+E:\Учеба\2 курс\ООП\Лаб\Lab_2\Lab_2\Lab_2\bin\Debug\netcoreapp3.1\Lab_2.deps.json
+E:\Учеба\2 курс\ООП\Лаб\Lab_2\Lab_2\Lab_2\bin\Debug\netcoreapp3.1\Lab_2.runtimeconfig.json
+E:\Учеба\2 курс\ООП\Лаб\Lab_2\Lab_2\Lab_2\bin\Debug\netcoreapp3.1\Lab_2.runtimeconfig.dev.json
+E:\Учеба\2 курс\ООП\Лаб\Lab_2\Lab_2\Lab_2\bin\Debug\netcoreapp3.1\Lab_2.dll
+E:\Учеба\2 курс\ООП\Лаб\Lab_2\Lab_2\Lab_2\bin\Debug\netcoreapp3.1\Lab_2.pdb
+E:\Учеба\2 курс\ООП\Лаб\Lab_2\Lab_2\Lab_2\obj\Debug\netcoreapp3.1\Lab_2.csproj.AssemblyReference.cache
+E:\Учеба\2 курс\ООП\Лаб\Lab_2\Lab_2\Lab_2\obj\Debug\netcoreapp3.1\Lab_2.GeneratedMSBuildEditorConfig.editorconfig
+E:\Учеба\2 курс\ООП\Лаб\Lab_2\Lab_2\Lab_2\obj\Debug\netcoreapp3.1\Lab_2.AssemblyInfoInputs.cache
+E:\Учеба\2 курс\ООП\Лаб\Lab_2\Lab_2\Lab_2\obj\Debug\netcoreapp3.1\Lab_2.AssemblyInfo.cs
+E:\Учеба\2 курс\ООП\Лаб\Lab_2\Lab_2\Lab_2\obj\Debug\netcoreapp3.1\Lab_2.csproj.CoreCompileInputs.cache
+E:\Учеба\2 курс\ООП\Лаб\Lab_2\Lab_2\Lab_2\obj\Debug\netcoreapp3.1\Lab_2.dll
+E:\Учеба\2 курс\ООП\Лаб\Lab_2\Lab_2\Lab_2\obj\Debug\netcoreapp3.1\Lab_2.pdb
+E:\Учеба\2 курс\ООП\Лаб\Lab_2\Lab_2\Lab_2\obj\Debug\netcoreapp3.1\Lab_2.genruntimeconfig.cache
