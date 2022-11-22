@@ -26,7 +26,7 @@ namespace Lab_2
             fight.createTrainingGame(play4, play5).PlayGame();
             */
 
-            for (int i = 0; i < 5; i++)
+            for (int i = 0; i < 10; i++)
             {
                 fight.createRaitingGame(play1, play5, rand.Next(1, 11)).PlayGame();
             }

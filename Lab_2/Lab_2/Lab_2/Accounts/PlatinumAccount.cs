@@ -7,7 +7,7 @@ namespace Lab_2.Accounts
 {
     class PlatinumAccount : GoldAccount
     {
-        private int Mult = 0;
+        private int Mult = 1;
         public PlatinumAccount(string name) : base(name)
         {
             UserName = name + "**";
@@ -15,6 +15,7 @@ namespace Lab_2.Accounts
 
         public override void Win(BaseGame game, string opponent)
         {
+            Mult++;
             if (Mult == 3)
             {
                 GamecurrentRating = GamecurrentRating + game.GR + 5;
@@ -26,8 +27,18 @@ namespace Lab_2.Accounts
 
             PlayerGames win = new PlayerGames(game.CurID, UserName, opponent, game.GR, GamecurrentRating, ((Status_of_Game)0), GamesCount, game.Type());
             gameList.Add(win);
-            Mult++;
+            
         }
-        
+
+        public override void Lose(BaseGame game, string opponent)
+        {
+            Mult = 0;
+
+            GamecurrentRating = GamecurrentRating - (int)(game.GR / 2);
+            PlayerGames lose = new PlayerGames(game.CurID, UserName, opponent, -game.GR, GamecurrentRating, ((Status_of_Game)1), GamesCount, game.Type());
+            gameList.Add(lose);
+
+
+        }
     }
 }

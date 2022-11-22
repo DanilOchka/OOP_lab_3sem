@@ -25,8 +25,7 @@ namespace Lab_2.Accounts
             gameList.Add(lose);
 
 
-        }
-        
+        }        
     }
 
 }
